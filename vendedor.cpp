@@ -8,19 +8,19 @@ vendedor::vendedor(){
 int vendedor::getCedula(){
 	return cedula;
 }
-void vendedor::setCedula(ced){
+void vendedor::setCedula(int ced){
 	cedula = ced;
 }
 float vendedor::getSueldoBase(){
 	return sueldoBase;
 }
-void vendedor::setSueldoBase(sB){
+void vendedor::setSueldoBase(float sB){
 	sueldoBase = sB;
 }
 float vendedor::getMontoVentas(){
 	return montoVentas;
 }
-void vendedor::setMontoventas(mV){
+void vendedor::setMontoVentas(float mV){
 	montoVentas = mV;
 }
 float vendedor::calcularComision(){
