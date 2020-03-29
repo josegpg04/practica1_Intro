@@ -4,10 +4,10 @@
 #include <iostream>
 using namespace std;
 
-class interfaceVendedor
+class InterfaceVendedor
 {
 	public:
-		interfaceVendedor();
+		InterfaceVendedor();
 		int leerCedula();
 		float leerSueldoBase();
 		float leerMontoVentas();

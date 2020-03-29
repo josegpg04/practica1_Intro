@@ -4,8 +4,8 @@
 CPP      = g++.exe -D__DEBUG__
 CC       = gcc.exe -D__DEBUG__
 WINDRES  = windres.exe
-OBJ      = main.o vendedor.o interfaceVendedor.o
-LINKOBJ  = main.o vendedor.o interfaceVendedor.o
+OBJ      = main.o Vendedor.o InterfaceVendedor.o Empresa.o InterfaceEmpresa.o
+LINKOBJ  = main.o Vendedor.o InterfaceVendedor.o Empresa.o InterfaceEmpresa.o
 LIBS     = -L"C:/Program Files/Dev-Cpp/MinGW64/lib" -L"C:/Program Files/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -g3
 INCS     = -I"C:/Program Files/Dev-Cpp/MinGW64/include" -I"C:/Program Files/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
 CXXINCS  = -I"C:/Program Files/Dev-Cpp/MinGW64/include" -I"C:/Program Files/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
@@ -27,8 +27,14 @@ $(BIN): $(OBJ)
 main.o: main.cpp
 	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
 
-vendedor.o: vendedor.cpp
-	$(CPP) -c vendedor.cpp -o vendedor.o $(CXXFLAGS)
+Vendedor.o: Vendedor.cpp
+	$(CPP) -c Vendedor.cpp -o Vendedor.o $(CXXFLAGS)
 
-interfaceVendedor.o: interfaceVendedor.cpp
-	$(CPP) -c interfaceVendedor.cpp -o interfaceVendedor.o $(CXXFLAGS)
+InterfaceVendedor.o: InterfaceVendedor.cpp
+	$(CPP) -c InterfaceVendedor.cpp -o InterfaceVendedor.o $(CXXFLAGS)
+
+Empresa.o: Empresa.cpp
+	$(CPP) -c Empresa.cpp -o Empresa.o $(CXXFLAGS)
+
+InterfaceEmpresa.o: InterfaceEmpresa.cpp
+	$(CPP) -c InterfaceEmpresa.cpp -o InterfaceEmpresa.o $(CXXFLAGS)

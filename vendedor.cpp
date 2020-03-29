@@ -1,29 +1,36 @@
-#include "vendedor.h"
+#include "Vendedor.h"
 
-vendedor::vendedor(){
+Vendedor::Vendedor(){
 	cedula = 0;
 	sueldoBase = 0.0;
 	montoVentas = 0.0;
+	contVenSinCom = 0;
 }
-int vendedor::getCedula(){
+int Vendedor::getCedula(){
 	return cedula;
 }
-void vendedor::setCedula(int ced){
+void Vendedor::setCedula(int ced){
 	cedula = ced;
 }
-float vendedor::getSueldoBase(){
+float Vendedor::getSueldoBase(){
 	return sueldoBase;
 }
-void vendedor::setSueldoBase(float sB){
+void Vendedor::setSueldoBase(float sB){
 	sueldoBase = sB;
 }
-float vendedor::getMontoVentas(){
+float Vendedor::getMontoVentas(){
 	return montoVentas;
 }
-void vendedor::setMontoVentas(float mV){
+void Vendedor::setMontoVentas(float mV){
 	montoVentas = mV;
 }
-float vendedor::calcularComision(){
+int Vendedor::getContVenSinCom(){
+	return contVenSinCom;
+}
+void Vendedor::setContVenSinCom(int cV){
+	contVenSinCom = cV;
+}
+float Vendedor::calcularComision(){
 	float com;
 	if (montoVentas > 500){
 	com = montoVentas*18/100;	
@@ -32,5 +39,10 @@ float vendedor::calcularComision(){
 	com = 0.0;
 	}
 	return com;
+}
+void Vendedor::contarVenSinCom(){
+	if (calcularComision() == 0.0){
+		contVenSinCom = contVenSinCom+1;
+	}
 }
 
