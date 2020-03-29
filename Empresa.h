@@ -30,7 +30,7 @@ class Empresa
 		void setComMenor(float cM);
 		void calcularTotalVentasMenorSueldoMinimo(Vendedor ven);
 		void calcularComMayores(Vendedor ven);
-		float calcularPorcVendSinCom(Vendedor ven, int i);
+		void calcularPorcVendSinCom(Vendedor ven, int i);
 		void calcularVenMenCom(Vendedor ven);
 	protected:
 };

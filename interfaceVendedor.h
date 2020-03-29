@@ -8,10 +8,10 @@ class InterfaceVendedor
 {
 	public:
 		InterfaceVendedor();
-		int leerCedula();
-		float leerSueldoBase();
-		float leerMontoVentas();
-		void reporteVendedor(float comision);
+		int leerCedula(int i);
+		float leerSueldoBase(int i);
+		float leerMontoVentas(int i);
+		void reporteVendedor(int i, float comision);
 	protected:
 };
 

@@ -60,8 +60,8 @@ void Empresa::calcularComMayores(Vendedor ven){
 		acumComision = acumComision+comision;
 	}
 }
-float Empresa::calcularPorcVendSinCom(Vendedor ven, int i){
-	return ven.getContVenSinCom()/i*100;
+void Empresa::calcularPorcVendSinCom(Vendedor ven, int i){
+	porcVendSinCom = ven.getContVenSinCom()/i*100;
 }
 void Empresa::calcularVenMenCom(Vendedor ven){
 	int ced;

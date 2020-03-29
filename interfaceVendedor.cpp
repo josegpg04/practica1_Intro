@@ -2,25 +2,25 @@
 
 InterfaceVendedor::InterfaceVendedor(){
 }
-int InterfaceVendedor::leerCedula(){
+int InterfaceVendedor::leerCedula(int i){
 	int ced;
-	cout << "Ingrese la cedula del Vendedor"<<endl;
+	cout << "Ingrese la cedula del Vendedor "<< i <<endl;
 	cin  >> ced;
 	return ced;
 }
-float InterfaceVendedor::leerSueldoBase(){
+float InterfaceVendedor::leerSueldoBase(int i){
 	float sB;
-	cout << "Ingrese el sueldo base del Vendedor"<<endl;
+	cout << "Ingrese el sueldo base del Vendedor "<< i <<endl;
 	cin >> sB;
 	return sB;
 }
-float InterfaceVendedor::leerMontoVentas(){
+float InterfaceVendedor::leerMontoVentas(int i){
 	float mV;
-	cout << "Ingrese el monto de ventas del Vendedor"<<endl;
+	cout << "Ingrese el monto de ventas del Vendedor "<< i <<endl;
 	cin >> mV;
 	return mV;
 }
-void InterfaceVendedor::reporteVendedor(float comision){
-	cout << "REPORTE DEL VENDEDOR" << endl;
+void InterfaceVendedor::reporteVendedor(int i, float comision){
+	cout << "REPORTE DEL VENDEDOR " << i << endl;
 	cout << "La Comision es de " << comision << endl;
 }
